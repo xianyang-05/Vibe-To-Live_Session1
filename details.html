@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#bff448",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "surface": "#131313",
+                    "on-secondary-fixed-variant": "#464747",
+                    "secondary-fixed-dim": "#c7c6c6",
+                    "on-primary-fixed-variant": "#384e00",
+                    "on-primary-fixed": "#141f00",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-secondary-container": "#b8b8b8",
+                    "surface-bright": "#393939",
+                    "error": "#ffb4ab",
+                    "surface-tint": "#a4d72b",
+                    "on-tertiary": "#2f3131",
+                    "on-error": "#690005",
+                    "inverse-on-surface": "#303030",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-fixed": "#e3e2e2",
+                    "on-secondary": "#2f3131",
+                    "on-primary-container": "#506e00",
+                    "on-surface": "#e2e2e2",
+                    "secondary-container": "#484949",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "on-tertiary-container": "#636565",
+                    "surface-container": "#1f1f1f",
+                    "on-primary": "#253500",
+                    "surface-dim": "#131313",
+                    "tertiary-container": "#e2e2e2",
+                    "on-background": "#e2e2e2",
+                    "background": "#131313",
+                    "surface-container-high": "#2a2a2a",
+                    "primary": "#ffffff",
+                    "tertiary": "#ffffff",
+                    "surface-variant": "#353535",
+                    "surface-container-highest": "#353535",
+                    "secondary": "#c7c6c6",
+                    "inverse-primary": "#4b6700",
+                    "inverse-surface": "#e2e2e2",
+                    "outline-variant": "#434936",
+                    "on-surface-variant": "#c3c9b0",
+                    "primary-fixed-dim": "#a4d72b",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "error-container": "#93000a",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-low": "#1b1b1b",
+                    "on-secondary-fixed": "#1a1c1c",
+                    "outline": "#8d937c",
+                    "primary-fixed": "#bff448"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xl": "64px",
+                    "gutter": "16px",
+                    "base": "8px",
+                    "md": "24px",
+                    "xs": "4px",
+                    "lg": "40px",
+                    "margin": "24px",
+                    "sm": "12px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Lexend"],
+                    "label-caps": ["Space Grotesk"],
+                    "headline-lg": ["Lexend"],
+                    "display-xl": ["Lexend"],
+                    "body-md": ["Inter"],
+                    "data-metric": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "data-metric": ["20px", {"lineHeight": "1.0", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md bg-black">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
+<div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-6 lg:px-12 w-full">
+<div class="flex items-center gap-4">
+<span onclick="window.location.href='dashboard.html'" class="material-symbols-outlined text-[#C0F549] active:scale-95 transition-transform duration-150 cursor-pointer">arrow_back</span>
+<span class="font-['Lexend'] font-bold tracking-tight text-xl font-black text-[#C0F549] uppercase tracking-wider">DailyFit</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-white/70 hover:opacity-80 transition-opacity cursor-pointer" data-icon="notifications">notifications</span>
+<img alt="Profile" class="w-8 h-8 rounded-full border border-[#C0F549]/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1h8Ak-kjTZB8I_znirrIVKnUrkOfeJ98CLzmS_F-k7dM-yoU40UrRaXpALQWLErreNTkj8OXD7tOd22WBDDXNgGE9EevhsPP8-InrLD5ZxJozB_wMAWAkhwPrpTXXjIfQmR_DsPKQhY1ldLdoOrSduauWbYZoUiWF-pDazJIbpEiqQ5UT9QQBnSU4sN0Wt1hXDjsvobdEYxqU_2sr7VSvqdlUjWXcgivOGvq6NcbVcnhA_n2P71Abxc3N-_chE9c0_g1MeHI_0DeR"/>
+</div>
+</div>
+</header>
+<main class="pt-16 pb-32 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<section class="relative w-full h-[397px] overflow-hidden">
+<img class="w-full h-full object-cover opacity-60" data-alt="A professional athlete performing a high-intensity functional movement in a dark, moody gym environment. The scene is lit with sharp, cinematic high-contrast lighting, emphasizing muscle definition and movement. The color palette is dominated by deep blacks and cool grays, with subtle vibrant green highlights reflecting the DailyFit brand identity. The atmosphere is intense and focused, capturing the raw energy of elite performance training." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_JdYIDW-LQznE3upgWZ_noTX8Juv-aVQlcj4g1fbMzTqoxlT0K7hFFOs286vZMG3aCuYLFK-VHNiKPbfjq8SGTfQMWBSa4t1N7VvvXy7sXhR_yeJOmfiJG-Oor7BiEiSf-KAeH8Lcuzd2YVzMIeabBzDrgI-3zvOmf1mBhmCzzXT3U_d6ysTT_NowFyO73kjNthU6y0oKSUDlVG8PzT_V0ljfAcr8rQa_HMirzJ6dCckvPxTMAvL-52jpHJIypubFHtJu5rQ6vdcV"/>
+<div class="absolute bottom-0 left-0 w-full p-margin bg-gradient-to-t from-black via-black/40 to-transparent">
+<span class="font-label-caps text-label-caps text-primary-container mb-2 block">ADVANCED • FULL BODY</span>
+<h1 class="font-display-xl text-display-xl text-white mb-4">Steel Core Strength</h1>
+<div class="flex gap-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-white/40 uppercase">Duration</span>
+<span class="font-data-metric text-data-metric text-primary-container">45 MIN</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-white/40 uppercase">Intensity</span>
+<span class="font-data-metric text-data-metric text-primary-container">HIGH</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-white/40 uppercase">Burn</span>
+<span class="font-data-metric text-data-metric text-primary-container">520 KCAL</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Stats Grid -->
+<section class="px-6 lg:px-12 py-lg grid grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-surface-container p-md rounded-xl border border-white/5 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary-container mb-4">timer</span>
+<div>
+<p class="font-label-caps text-label-caps text-white/40 mb-1">REST PERIOD</p>
+<p class="font-headline-md text-headline-md text-white">60s</p>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-white/5 flex flex-col justify-between">
+<span class="material-symbols-outlined text-primary-container mb-4">fitness_center</span>
+<div>
+<p class="font-label-caps text-label-caps text-white/40 mb-1">EQUIPMENT</p>
+<p class="font-headline-md text-headline-md text-white">Full Gym</p>
+</div>
+</div>
+<div class="bg-surface-container p-md rounded-xl border border-white/5 flex flex-col justify-between col-span-2">
+<span class="material-symbols-outlined text-primary-container mb-4">target</span>
+<div>
+<p class="font-label-caps text-label-caps text-white/40 mb-1">PRIMARY FOCUS</p>
+<p class="font-headline-md text-headline-md text-white">Hypertrophy &amp; Power</p>
+</div>
+</div>
+</section>
+<!-- Exercise List -->
+<section class="px-6 lg:px-12 space-y-6">
+<div class="flex justify-between items-end mb-4">
+<h2 class="font-headline-lg text-headline-lg text-white">Workout Plan</h2>
+<span class="font-label-caps text-label-caps text-white/40">7 EXERCISES</span>
+</div>
+<!-- Exercise Card 1 -->
+<div class="bg-surface-container p-4 rounded-xl border border-white/5 flex items-center gap-4 hover:border-primary-container/30 transition-colors">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-black">
+<img class="w-full h-full object-cover" data-alt="A detailed close-up shot of a chrome barbell being lifted in a dark gym environment. The lighting is focused and dramatic, highlighting the texture of the metal and the tension in the lifter's grip. Deep shadows and vibrant green neon accents create a high-performance aesthetic consistent with the DailyFit brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfco8Xewh_uxLsFZTV0wiC8nXqMUSzyliKbsfUWXEDYEIzoksorhwQ_swiUmK8Hq0qvghDYZj5_IPgStaWxSfzQj1hY0l0pX9QObk_MkmAs6WBRAfDlBjATMXqhfAR_GcR6DtM6croOX-yHI6G_PS2YiPZ2-7pc2LXKC6ztAfiqsKSdOIypmYVU147hsfqM638HkKtpThZG2TQ-bXDdzHfBMKRoM9IhznQOp2yJmlHBbplQ90QhXxWpLu378I32y3SXyZOPjRxKmzF"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-white text-lg">Barbell Back Squats</h3>
+<p class="font-body-md text-white/40">Compound • Quadriceps</p>
+</div>
+<div class="text-right">
+<p class="font-data-metric text-data-metric text-primary-container">4 × 8</p>
+<p class="font-label-caps text-label-caps text-white/40">SETS/REPS</p>
+</div>
+</div>
+<!-- Exercise Card 2 -->
+<div class="bg-surface-container p-4 rounded-xl border border-white/5 flex items-center gap-4 hover:border-primary-container/30 transition-colors">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-black">
+<img class="w-full h-full object-cover" data-alt="A focused image of heavy dumbbells resting on a rubber gym floor. The low-angle perspective and cinematic lighting emphasize the rugged, professional nature of the equipment. A dark, moody atmosphere prevails, with the signature DailyFit green glow appearing as a subtle reflection on the polished surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3E071hZ26alwBgSykeBPIGP6kC_QYX0nPIEvmrUFJ5RjNal4RA7NRJzm_JiwqPkAi4-cAvMvsEKAmdlMw4nDHGuMvkZv_oOWdro9RbRrw1xjZnLyDnlmrOVP_5vYp0vFInaITGXWHMkBn9HTCqZlKDyThv7VpGQPvV1EYKE3BuLceiNzBUSUvaRAThh5NMooBhnxdZFTt28um2QJiAEdWS1CN7b--KlXKa9mOB0LX2lrCJ39Kh4XgC1j-4izDC1VZ0WE2Z6YfKjC7"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-white text-lg">Incline DB Press</h3>
+<p class="font-body-md text-white/40">Compound • Upper Chest</p>
+</div>
+<div class="text-right">
+<p class="font-data-metric text-data-metric text-primary-container">3 × 12</p>
+<p class="font-label-caps text-label-caps text-white/40">SETS/REPS</p>
+</div>
+</div>
+<!-- Exercise Card 3 -->
+<div class="bg-surface-container p-4 rounded-xl border border-white/5 flex items-center gap-4 hover:border-primary-container/30 transition-colors">
+<div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-black">
+<img class="w-full h-full object-cover" data-alt="A top-down view of a kettlebell and gym chalk on a dark textured mat. The scene is lit with a single overhead source creating stark highlights and deep shadows. The technical precision of the arrangement suggests a high-performance training session, with the DailyFit brand's minimal and aggressive design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3jS1WGwqsox1vxqXo8MTx-P2qqG7mYUMl2xyAXHby_q55-mtLX3ZGqWua4bNXRkWjsQRR5spjmMZWpQmS_Hy7AdWmTVRV9fR_r2v4YaW5GlSQPM2qpoF27ctGsmF0weLvoymF-uQijqcH7Q-j0rqxSAO_IcEr5EQFnB8tlwAxdiixPmWVELaXCFyqdeMq6CBQXsKszrVJK7BeftWyTPb_HfmqjZjbYg68P7WRfoXaDDVQcTKDoCf2OnvQP8pFOn63d4rg5x_WhzL"/>
+</div>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-white text-lg">Deadlifts</h3>
+<p class="font-body-md text-white/40">Compound • Posterior Chain</p>
+</div>
+<div class="text-right">
+<p class="font-data-metric text-data-metric text-primary-container">5 × 5</p>
+<p class="font-label-caps text-label-caps text-white/40">SETS/REPS</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-6 lg:px-12 mt-lg mb-xl">
+<button id="start-workout-btn" class="w-full lg:w-auto lg:px-16 bg-primary-container text-black font-['Lexend'] font-bold py-5 rounded-2xl text-lg flex justify-center items-center gap-2 active:scale-95 transition-transform duration-150 shadow-lg shadow-primary-container/20 lg:mx-auto">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                START WORKOUT
+            </button>
+</section>
+  <script type="module">
+    import { auth, onAuthStateChanged } from './firebase-config.js';
+
+    // Protect Page: Redirect to login if not authenticated
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        window.location.href = 'index.html';
+      }
+    });
+
+    const startBtn = document.getElementById('start-workout-btn');
+    let isStarted = false;
+    startBtn.addEventListener('click', () => {
+        isStarted = !isStarted;
+        if (isStarted) {
+            startBtn.innerHTML = `
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">stop</span>
+                FINISH WORKOUT
+            `;
+            startBtn.classList.remove('bg-primary-container');
+            startBtn.classList.add('bg-white', 'text-black');
+            alert('Workout session started! Let\'s go!');
+        } else {
+            startBtn.innerHTML = `
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                START WORKOUT
+            `;
+            startBtn.classList.add('bg-primary-container');
+            startBtn.classList.remove('bg-white', 'text-black');
+            alert('Great job! Workout session completed.');
+        }
+    });
+  </script>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center h-16 lg:h-14 px-4 bg-black/90 backdrop-blur-2xl border-t border-white/5 rounded-t-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.5)] z-50">
+<div class="max-w-7xl mx-auto w-full flex justify-around items-center">
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90" href="dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#C0F549] transition-all duration-300" href="details.html">
+<span class="material-symbols-outlined" data-icon="fitness_center" style="font-variation-settings: 'FILL' 1;">fitness_center</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Workouts</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90" href="#">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Stats</span>
+</a>
+<a class="flex flex-col items-center justify-center text-white/40 hover:text-white/90" href="profile.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Lexend'] text-[10px] font-medium uppercase tracking-widest mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>
