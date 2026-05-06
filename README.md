@@ -134,7 +134,7 @@ Ask Antigravity: *"Use Stitch MCP to access my [DailyFit] Stitch project."*
 
 #### 1. Build the app UI
 Prompt Antigravity:
-> "Use my Stitch design as the visual reference. Build the app UI with Landing, Auth, Dashboard, Statistics, and Profile pages. Match the Stitch UI style and add working navigation between pages."
+> "Use my Stitch design as the visual reference.Build the UI for [Project Name] based on the Stitch design.Match the Stitch UI style and add working navigation between the pages."
 
 #### 2. Improve Interaction
 Ask Antigravity to refine buttons:
