@@ -140,9 +140,16 @@ If you see your project name in the list, the MCP is connected successfully!
 
 #### 1. Build the app UI
 Prompt Antigravity:
-> "Use the [Project Name] Stitch project as the reference.
-> Build the UI based on the project I selected in Stitch, using the same design style, layout, colors, and components.
-> Add working navigation between the pages."
+> Create a modern web app called [Your App Name] based on the UI design from the [Stitch Project Name] Stitch project.
+> Follow the Stitch project design as closely as possible, including layout, colors, typography, spacing, cards, buttons, and overall style.
+> 
+> Build only these 3 pages:
+> 1. Landing page
+> 2. Authentication page with Sign In and Sign Up
+> 3. Dashboard page
+> 
+> Add working navigation between the pages.
+> Do not open the browser, search the web, or visit external websites. Only use the Stitch project selected as the design reference.
 
 #### 2. Improve Interaction
 Ask Antigravity to refine buttons:
@@ -161,9 +168,12 @@ Run the app and verify all pages and navigation.
 #### 1. Create and Configure Firebase project
 - Go to [Firebase Console](https://console.firebase.google.com/) and create a project (e.g., `DailyFit`).
 - **Enable Email/Password Auth**:
+  - Select **Security** in the right panel.
   - Go to **Authentication** → **Get Started**.
   - Under **Sign-in method**, choose **Email/Password**.
-  - Toggle **Enabled** and click **Save**.
+  - Toggle **Email/Password** to **Enabled**.
+  - Leave **Email link (passwordless sign-in)** disabled.
+  - Click **Save**.
 
 #### 2. Connect Firebase MCP
 In Antigravity: `MCP Servers` → `Add Firebase MCP` → Connect your account.
