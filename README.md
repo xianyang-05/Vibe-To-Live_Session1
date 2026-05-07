@@ -1,6 +1,6 @@
-# 🛠️ Workshop Handbook: Building DailyFit with Antigravity & MCP
+# 🛠️ Workshop Handbook: Building App with Antigravity & MCP
 
-Welcome to the **DailyFit** workshop! This handbook will guide you through the journey of building a premium, AI-powered fitness tracking application from scratch using the modern agentic stack.
+Welcome to the **Vibe To Live** workshop! This handbook will guide you through building a web application from scratch using a modern AI-assisted development workflow.
 
 ---
 
@@ -14,8 +14,12 @@ Node.js is required to run development tools and manage dependencies.
 - **Verify installation**:
   ```bash
   node -v
+  ```
+  **Sample Output**: `v22.14.0`
+  ```bash
   npm -v
   ```
+  **Sample Output**: `11.2.0`
 
 ### 2. Antigravity Installation
 Antigravity is the AI coding workspace used in this workshop.
@@ -35,6 +39,7 @@ Docker is needed to run some MCP servers locally, especially GitHub MCP.
   ```bash
   docker --version
   ```
+  **Sample Output**: `Docker version 27.3.1, build ce12230`
 - **Verify Docker engine is running**:
   ```bash
   docker info
@@ -44,7 +49,7 @@ Docker is needed to run some MCP servers locally, especially GitHub MCP.
 
 ### 4. Accounts Required
 Please sign in or create accounts for:
-- [Stitch](https://stitch.fit)
+- [Stitch](https://stitch.withgoogle.com/)
 - [Firebase](https://console.firebase.google.com/)
 - [GitHub](https://github.com/)
 
@@ -75,10 +80,8 @@ In this workshop, participants will build a web app using:
 ### Phase 1: Choose Your App Idea
 Before opening Stitch, choose a simple app idea. Your app should include at least:
 1. Landing page
-2. Authentication page with Sign In and Sign Up
+2. Authentication page (Sign In/Up)
 3. Dashboard page
-4. Statistics / Progress page
-5. Profile page
 
 ---
 
@@ -91,13 +94,13 @@ Open Stitch in your browser and sign in with your Google account.
 Create a new project using your app name (e.g., `DailyFit`).
 
 #### 3. Paste a website URL as design reference
-Paste a website URL that has the UI style you want to follow. Stitch uses this for:
+Paste a website URL that has the UI style you want to follow (e.g., `https://glaido.com/`). Stitch uses this for:
 - Layout style & Spacing
 - Color theme & Typography
 - Card and Button design
 
 #### 4. Use this prompt in Stitch
-> "Create a modern web app called **[Your App Name]** based on the UI style of the website URL I provided. The app is for **[briefly describe your app idea]**. Include 5 main pages: Landing, Authentication (Sign In/Up), Dashboard, Statistics, and Profile. The app should feel clean and consistent."
+> "Create a modern web app called **[Your App Name]** based on the UI style of the website URL I provided. The app is for **[briefly describe your app idea]**. Include 3 main pages: Landing, Authentication (Sign In/Up), and Dashboard. The app should feel clean and consistent."
 
 #### 5. Refine the design
 Make the design cleaner and more premium. Improve the spacing, buttons, cards, and page consistency. **Keep the Stitch project open** for the next steps.
@@ -126,7 +129,10 @@ In Stitch: `Settings` → `API Keys` → `Create API Key`. Copy it (keep it priv
 In Antigravity: `MCP Servers` → `Add Stitch MCP` → Paste API Key → `Connect`.
 
 #### 3. Test Connection
-Ask Antigravity: *"Use Stitch MCP to access my [DailyFit] Stitch project."*
+Prompt Antigravity: 
+> "List my Stitch projects."
+
+If you see your project name in the list, the MCP is connected successfully!
 
 ---
 
@@ -134,7 +140,9 @@ Ask Antigravity: *"Use Stitch MCP to access my [DailyFit] Stitch project."*
 
 #### 1. Build the app UI
 Prompt Antigravity:
-> "Use my Stitch design as the visual reference.Build the UI for [Project Name] based on the Stitch design.Match the Stitch UI style and add working navigation between the pages."
+> "Use the [Project Name] Stitch project as the reference.
+> Build the UI based on the project I selected in Stitch, using the same design style, layout, colors, and components.
+> Add working navigation between the pages."
 
 #### 2. Improve Interaction
 Ask Antigravity to refine buttons:
@@ -150,8 +158,12 @@ Run the app and verify all pages and navigation.
 
 ### Phase 6: Connect Firebase MCP
 
-#### 1. Create Firebase project
-Go to [Firebase Console](https://console.firebase.google.com/) and create a project (e.g., `DailyFit`).
+#### 1. Create and Configure Firebase project
+- Go to [Firebase Console](https://console.firebase.google.com/) and create a project (e.g., `DailyFit`).
+- **Enable Email/Password Auth**:
+  - Go to **Authentication** → **Get Started**.
+  - Under **Sign-in method**, choose **Email/Password**.
+  - Toggle **Enabled** and click **Save**.
 
 #### 2. Connect Firebase MCP
 In Antigravity: `MCP Servers` → `Add Firebase MCP` → Connect your account.
@@ -165,10 +177,14 @@ firebase login
 
 #### 4. Set up Authentication
 Prompt Antigravity:
-> "Use Firebase MCP to set up email/password authentication. Connect the forms, handle redirects to the dashboard after login, and add a logout function."
+> "List my Firebase projects."
+- If you see your project name in the list, the MCP is connected successfully!
+
+> "Use my **[Your Firebase Project Name]** to set up email/password authentication. Connect the forms, handle redirects to the dashboard after login, and add a logout function."
 
 #### 5. Test & Verify
-Sign up in your app, then check the **Users** tab in your Firebase Console to see the new entry.
+1. Open your web app and **create a new account** using the sign-up form.
+2. Check the **Users** tab in your Firebase Console to see the new entry.
 
 ---
 
